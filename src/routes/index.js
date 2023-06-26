@@ -8,6 +8,7 @@ router.route('/currency')
 .get(currencyController.getCurrency)
 .post(currencyController.createCurrency)
 .put(currencyController.updateCurrency)
+.delete(currencyController.deleteCurrency)
 
 
 module.exports = router
