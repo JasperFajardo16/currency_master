@@ -1,6 +1,5 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const logging = require('./logging')
 const routes = require('./routes')
 const cors = require('cors')
 
@@ -12,20 +11,6 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.disable('x-powered-by')
-
-/**
- * Error Handler.
- */
-if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'local') {
-  // only use in development
-  const errorHandler = require('errorhandler')
-  app.use(errorHandler())
-} else {
-  app.use((err, req, res, next) => {
-    console.error(err)
-    res.status(500).send('Server Error')
-  })
-}
 
 app.use(routes)
 

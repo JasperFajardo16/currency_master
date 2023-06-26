@@ -1,14 +1,13 @@
 const express = require('express')
-const asyncHandler = require('express-async-handler')
-const healthController = require('../controllers/healthController')
-const replaceMeController = require('../controllers/replacemeController')
+const currencyController = require('../controllers/currencyController')
 
 let router = express.Router()
-router.route('/health').get(healthController.healthCheck)
 
-/* FIXME put your real routes here */
-router.route('/replaceme').get(asyncHandler(replaceMeController.getReplaceMes))
-  .put(asyncHandler(replaceMeController.updateReplaceMes))
-  .post(asyncHandler(replaceMeController.addReplaceMes))
+
+router.route('/currency')
+.get(currencyController.getCurrency)
+.post(currencyController.createCurrency)
+.put(currencyController.updateCurrency)
+
 
 module.exports = router
