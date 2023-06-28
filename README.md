@@ -1,10 +1,3 @@
-## DB Access
-
-```bash
-IP should be whitelisted to access DB (mongoDB)
-contact: JasperFajardo16
-email: fajardojasper1690@gmail.com
-```
 ## Commands
 
 Running locally:
@@ -15,7 +8,7 @@ npm run dev
 
 Testing:
 
-```bash
+````bash
 # run all tests
 npm run test
 
@@ -23,4 +16,4 @@ npm run test
 ```bash
 contact: JasperFajardo16
 email: fajardojasper1690@gmail.com
-```
+````
