@@ -2,6 +2,11 @@
 
 Running locally:
 
+install dependencies
+```bash
+npm install
+```
+
 ```bash
 npm run dev
 ```
